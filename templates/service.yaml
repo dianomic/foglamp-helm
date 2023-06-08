@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "foglamp.fullname" . }}-deployment
+  labels:
+  {{- include "foglamp.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.deployment.type }}
+  selector:
+    app: foglamp-deployment
+  {{- include "foglamp.selectorLabels" . | nindent 4 }}
+  ports:
+	{{- .Values.deployment.ports | toYaml | nindent 2 -}}
