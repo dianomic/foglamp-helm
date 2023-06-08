@@ -9,19 +9,15 @@ metadata:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   rules:
-  - host: foglamp-prod.dtinet.net
+  - host: foglamp-gui
     http:
       paths:
       - backend:
           serviceName: foglamp-deployment
           servicePort: 80
-  - host: foglamp-api-prod.dtinet.net
+  - host: foglamp-api
     http:
       paths:
       - backend:
           serviceName: foglamp-deployment
           servicePort: 8081
-  tls:
-  - hosts:
-    - foglamp-prod.dtinet.net
-    secretName: dtinet-wildcard-cert
