@@ -1,0 +1,24 @@
+deployment:
+  foglampDeployment:
+    env:
+      foglampRoot: /usr/local/foglamp
+    image:
+      repository: brycedianomic/foglamp:shell
+      tag: 2.1.0
+    imagePullPolicy: Always
+  ports:
+  - name: api
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  replicas: 1
+  type: ClusterIP
+kubernetesClusterDomain: cluster.local
+pvc:
+  data:
+    storageClass: aws-ebs-gp2
+    storageRequest: 10Gi
