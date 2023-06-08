@@ -20,5 +20,5 @@ deployment:
 kubernetesClusterDomain: cluster.local
 pvc:
   data:
-    storageClass: aws-ebs-gp2
+    storageClass: local
     storageRequest: 10Gi
