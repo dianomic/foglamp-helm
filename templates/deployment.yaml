@@ -41,8 +41,6 @@ spec:
         volumeMounts:
         - mountPath: /usr/local/foglamp/data
           name: foglamp-data
-      imagePullSecrets:
-      - name: jfrog
       volumes:
       - name: foglamp-data
         persistentVolumeClaim:
