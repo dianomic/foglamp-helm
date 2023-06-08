@@ -15,17 +15,17 @@ spec:
       - path: /
         pathType: ImplementationSpecific
         backend:
-        - service:
-          - name: foglamp-deployment
+          service:
+            name: foglamp-deployment
             port:
-            - number: 80
+              number: 80
   - host: foglamp-api
     http:
       paths:
-        - path: /
-          pathType: ImplementationSpecific
-          backend:
-          - service:
-            - name: foglamp-deployment
-              port:
-              - number: 443
+       - path: /
+         pathType: ImplementationSpecific
+         backend:
+           service:
+             name: foglamp-deployment
+             port:
+               number: 443
