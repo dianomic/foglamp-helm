@@ -3,8 +3,8 @@ deployment:
     env:
       foglampRoot: /usr/local/foglamp
     image:
-      repository: brycedianomic/foglamp:shell
-      tag: 2.1.0
+      repository: docker.io/brycedianomic/foglamp
+      tag: shell
     imagePullPolicy: Always
   ports:
   - name: api
