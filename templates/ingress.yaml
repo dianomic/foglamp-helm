@@ -20,7 +20,7 @@ spec:
       paths:
       - backend:
           serviceName: foglamp-deployment
-          servicePort: 8081
+          servicePort: 443
   tls:
   - hosts:
     - foglamp-prod.dtinet.net
