@@ -12,12 +12,20 @@ spec:
   - host: foglamp-gui
     http:
       paths:
-      - backend:
-          serviceName: foglamp-deployment
-          servicePort: 80
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+        - service:
+          - name: foglamp-deployment
+            port:
+            - number: 80
   - host: foglamp-api
     http:
       paths:
-      - backend:
-          serviceName: foglamp-deployment
-          servicePort: 443
+        - path: /
+          pathType: ImplementationSpecific
+          backend:
+          - service:
+            - name: foglamp-deployment
+              port:
+              - number: 443
