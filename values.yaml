@@ -3,7 +3,7 @@ deployment:
     env:
       foglampRoot: /usr/local/foglamp
     image:
-      repository: dianomicjfrog.jfrog.io/dianomic-docker/foglamp
+      repository: brycedianomic/foglamp:shell
       tag: 2.1.0
     imagePullPolicy: Always
   ports:
