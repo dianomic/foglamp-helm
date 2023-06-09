@@ -4,7 +4,7 @@ deployment:
       foglampRoot: /usr/local/foglamp
     image:
       repository: docker.io/brycedianomic/foglamp
-      tag: shell
+      tag: shell-nodatadir
     imagePullPolicy: Always
   ports:
   - name: api
