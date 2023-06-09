@@ -18,7 +18,3 @@ deployment:
   replicas: 1
   type: ClusterIP
 kubernetesClusterDomain: cluster.local
-pvc:
-  data:
-    storageClass: aws-ebs-gp2
-    storageRequest: 10Gi

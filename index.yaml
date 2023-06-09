@@ -3,12 +3,12 @@ entries:
   foglamp:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-06-08T22:57:24.625886112Z"
+    created: "2023-06-09T00:19:52.928361624Z"
     description: A Helm chart for Kubernetes
-    digest: bd3b4bc6d334cabd5ac7355cb36718a82ed2c4e07639c700a846b96e05b3b9bb
+    digest: ac8623d05052f9b01e036b0eb0c1fbe9764f2e483e0ad016fa7e3fda0606174b
     name: foglamp
     type: application
     urls:
     - https://dianomic.github.io/foglamp-helm/foglamp-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-08T22:57:24.625227997Z"
+generated: "2023-06-09T00:19:52.927661576Z"
