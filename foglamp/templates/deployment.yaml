@@ -38,3 +38,10 @@ spec:
           name: http
           protocol: TCP
         resources: {}
+        volumeMounts:
+        - mountPath: /usr/local/foglamp/data
+          name: foglamp-data
+      volumes:
+      - name: foglamp-data
+        persistentVolumeClaim:
+          claimName: {{ include "foglamp.fullname" . }}-data

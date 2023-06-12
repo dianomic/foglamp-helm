@@ -4,7 +4,7 @@ deployment:
       foglampRoot: /usr/local/foglamp
     image:
       repository: docker.io/brycedianomic/foglamp
-      tag: shell-nodatadir
+      tag: shell
     imagePullPolicy: Always
   ports:
   - name: api
@@ -18,3 +18,7 @@ deployment:
   replicas: 1
   type: ClusterIP
 kubernetesClusterDomain: cluster.local
+pvc:
+  data:
+    storageClass: aws-ebs-gp2
+    storageRequest: 10Gi
